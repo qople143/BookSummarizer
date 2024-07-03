@@ -57,4 +57,4 @@ This is a web application that uses Flask for the backend and React.js for the f
 ## Acknowledgements
 
 - Special thanks to the developers of [Book Cover API](https://github.com/w3slley/bookcover-api) for providing book cover API.
-- This project utilizes advanced AI algorithms for text summarization, contributing to the field of natural language processing.
+- This project utilizes Utilizes Groq AI api for text summarization.
