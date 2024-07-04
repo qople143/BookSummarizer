@@ -18,7 +18,7 @@ This is a web application that uses Flask for the backend and React.js for the f
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-repo/AI-Powered-Book-Summarizer.git
+   git clone https://github.com/Vaibhavkale123/AI-Powered-Book-Summarizer.git
    ```
 
 2. Install dependencies for the backend (Flask):
