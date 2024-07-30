@@ -17,13 +17,13 @@ def get_summary(book):
     chat.clear()
     chat.append({
             "role": "user",
-            "content": f"write in detail summary of {book}"
+            "content": f"write ashort summary of {book}. No explaination, only summary"
         })
     completion = client.chat.completions.create(
-        model=model1,
+        model=model2,
         messages=chat,
         temperature=1,
-        max_tokens=100,
+        max_tokens=300,
         # top_p=1,
         # stream=False,
         # response_format={"type": "json_object"},
