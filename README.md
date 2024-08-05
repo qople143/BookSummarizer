@@ -54,6 +54,11 @@ This is a web application that uses Flask for the backend and React.js for the f
 3. View the summarized text on the screen.
 4. Select Qestions and get answer.
 
+
+## Screenshots
+
+![Home Screenshot](/screenshots/summary.png)
+
 ## Acknowledgements
 
 - Special thanks to the developers of [Book Cover API](https://github.com/w3slley/bookcover-api) for providing book cover API.
