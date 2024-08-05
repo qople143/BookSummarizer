@@ -29,7 +29,7 @@ This is a web application that uses Flask for the backend and React.js for the f
 
 3. Install dependencies for the frontend (React.js):
    ```
-   cd Book Summary app frontend
+   cd client
    npm install
    ```
 
@@ -41,7 +41,7 @@ This is a web application that uses Flask for the backend and React.js for the f
 
 5. Start the frontend development server:
    ```
-   cd Book Summary app frontend
+   cd client
    npm start
    ```
 
@@ -53,6 +53,10 @@ This is a web application that uses Flask for the backend and React.js for the f
 2. Click the "Send" button to generate a summary of the content.
 3. View the summarized text on the screen.
 4. Select Qestions and get answer.
+
+## Screenshots
+
+![Home Screenshot](/screenshot/summary.png)
 
 ## Acknowledgements
 
