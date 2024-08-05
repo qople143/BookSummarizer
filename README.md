@@ -54,7 +54,7 @@ This is a web application that uses Flask for the backend and React.js for the f
 3. View the summarized text on the screen.
 4. Select Qestions and get answer.
 
-## Screenshots
+## Screenshot
 
 ![Home Screenshot](/screenshot/summary.png)
 
