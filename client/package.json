@@ -16,7 +16,7 @@
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-router-dom": "^6.30.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^0.0.0",
     "react-type-animation": "^3.2.0",
     "remark": "^15.0.1",
     "slick-carousel": "^1.8.1",
