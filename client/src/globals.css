@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+
+:root {
+  --background: 162 50% 8%;
+  --foreground: 43 30% 90%;
+  --card: 162 50% 8%;
+  --card-foreground: 43 30% 90%;
+  --primary: 43 45% 60%;
+  --primary-foreground: 43 30% 90%;
+  --secondary: 162 30% 15%;
+  --secondary-foreground: 43 30% 90%;
+  --muted: 162 30% 15%;
+  --muted-foreground: 43 20% 65%;
+  --accent: 43 45% 60%;
+  --accent-foreground: 43 30% 90%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 43 30% 90%;
+  --border: 43 45% 60%;
+  --input: 162 30% 15%;
+  --ring: 43 45% 60%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-lora), Georgia, serif;
+  background-color: #0a1f1c;
+  color: #e9e2d0;
+  /* MODIFIED: Corrected path for celestial-sun.png relative to globals.css */
+  background-image: url("../public/celestial-sun.png"); /* Path from src/ to public/ */
+  background-size: cover; /* or adjust as needed for background image */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Optional: fixes background during scroll */
+}
+
+.font-heading {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-serif {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+.tracking-wide {
+  letter-spacing: 0.1em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.2em;
+}
+
+/* Decorative elements */
+.decorative-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(205, 175, 115, 0),
+    rgba(205, 175, 115, 0.5),
+    rgba(205, 175, 115, 0)
+  );
+  width: 100%;
+  position: relative;
+}
+
+.decorative-line::before {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #cdaf73;
+  background-color: #0a1f1c;
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+/* Arch frame for book covers */
+.arch-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* Aspect ratio (e.g., 2:3 for 100/150) */
+  overflow: hidden;
+}
+
+.arch-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(205, 175, 115, 0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.arch-frame::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 31, 28, 0) 0%,
+    rgba(10, 31, 28, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.arch-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover effect for images within arch-frame (used in About.jsx) */
+.arch-frame.image-hover-effect:hover {
+  transform: translateY(-5px) scale(1.02); /* Lifts and slightly scales the image */
+  box-shadow: 0 8px 16px rgba(205, 175, 115, 0.3); /* Adds a stronger, themed shadow */
+}
+
+/* Question circles */
+.question-circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.question-circle:hover {
+  transform: translateY(-5px);
+}
+
+.question-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(205, 175, 115, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Spinner container */
+.spinner-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.spinner-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 1px solid rgba(205, 175, 115, 0.2);
+  border-radius: 50%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 31, 28, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(205, 175, 115, 0.3);
+  border: 1px solid rgba(205, 175, 115, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(205, 175, 115, 0.5);
+}
+
+/* Button hover effects */
+button,
+.btn {
+  transition: all 0.3s ease !important;
+}
+
+button:hover,
+.btn:hover {
+  background-color: rgba(205, 175, 115, 0.1) !important;
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Celestial decorative elements */
+.celestial-decoration {
+  position: absolute;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  opacity: 0.15; /* Maintain the opacity set in the component */
+  pointer-events: none;
+  /* Ensure the image itself is covered by the object-fit or is contained properly */
+  object-fit: contain;
+}
+
+.celestial-decoration.top-right {
+  top: 50px;
+  right: 50px;
+}
+
+.celestial-decoration.bottom-left {
+  bottom: 50px;
+  left: 50px;
+}
